@@ -2,7 +2,7 @@
 #ifndef SKIPLIST_H
 #define SKIPLIST_H
 
-#include "./sset.h"
+#include "../include/sset.h"
 #include <vector>
 #include <cstdlib>
 #include <ctime>
