@@ -14,7 +14,7 @@ public:
     virtual bool remove(T x) = 0;
     
     // Returns true if the set contains the element
-    virtual bool contains(T x) const = 0;
+    virtual bool contains(T x) const = 0; 
     
     // Returns the number of elements in the set
     virtual int size() const = 0;
