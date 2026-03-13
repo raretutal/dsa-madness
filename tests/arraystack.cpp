@@ -12,7 +12,6 @@ int main() {
 
     cout << "Top element: " << s.top() << endl;
     cout << "Stack size: " << s.size() << endl;
-    cout << "Element at Index 2: " << s.peekAt(1) << endl;
 
     // pop elements
     while (!s.isEmpty()) {
