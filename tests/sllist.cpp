@@ -6,7 +6,6 @@ using namespace std;
 int main() {
     SLList<int> q;
 
-    // enqueue elements
     q.add(10);
     q.add(20);
     q.add(30);
