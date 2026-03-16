@@ -38,7 +38,7 @@ public:
         }
     }
 
-    void add(T x) override { // enqueue
+    void add(T x) override {
         Node* newNode;
 
         // twist: reuse node if available
@@ -61,7 +61,7 @@ public:
         n++;
     }
 
-    T remove() override { // dequeue
+    T remove() override {
         if (head == nullptr) {
             throw std::out_of_range("Queue empty");
         }
