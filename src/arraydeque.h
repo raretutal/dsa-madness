@@ -4,6 +4,7 @@
 #include "../include/list.h"
 #include <algorithm>
 #include <stdexcept>
+#include <iostream>
 
 template <typename T>
 class ArrayDeque : public List<T> {
@@ -13,7 +14,7 @@ private:
     int n;
     int cap;
 
-    //indexing helper: for cleaner code
+    // indexing helper: for cleaner code
     int index(int i) const {
         return (start + i) % cap;
     }
@@ -21,7 +22,7 @@ private:
     void resize() {
         int oldCap = cap;
         cap = std::max(2 * n, 1);
-        T* newArray = new T[cap];  
+        T* newArray = new T[cap];
 
         for (int k = 0; k < n; k++) {
             newArray[k] = array[(start + k) % oldCap];
@@ -29,7 +30,7 @@ private:
 
         delete[] array;
         array = newArray;
-        start = 0; 
+        start = 0;
     }
 
 public:
@@ -46,20 +47,20 @@ public:
 
     T set(int i, T x) override {
         if (i < 0 || i >= n) throw std::out_of_range("Index out of bounds");
-        T old = array[index(i)]; 
-        array[index(i)] = x; 
+        T old = array[index(i)];
+        array[index(i)] = x;
         return old;
     }
 
     void add(int i, T x) override {
         if (i < 0 || i > n) throw std::out_of_range("Index out of bounds");
-        
+
         if (n + 1 > cap) resize();
 
-        if (i < n / 2) { 
-            // shift elements to the left 
+        if (i < n / 2) {
+            // shift elements to the left
             start = (start == 0) ? cap - 1 : start - 1;
-            for (int k = 0; k < i; k++) 
+            for (int k = 0; k < i; k++)
                 array[index(k)] = array[index(k + 1)];
         } else {
             // shift elements to the right
@@ -73,7 +74,7 @@ public:
 
     T remove(int i) override {
         if (i < 0 || i >= n) throw std::out_of_range("Index out of bounds");
-        
+
         T x = array[index(i)];
 
         if (i < n / 2) {
@@ -94,6 +95,26 @@ public:
 
     int size() const override { return n; }
     bool isEmpty() const override { return n == 0; }
+
+    // prints all elements for debugging
+    void print() const {
+        for (int k = 0; k < n; k++) {
+            std::cout << "[" << k << "] = " << array[index(k)] << std::endl;
+        }
+        std::cout << "size: " << n << std::endl;
+    }
+
+    // returns the index of x, or -1 if not found
+    int indexOf(T x) const {
+        for (int k = 0; k < n; k++)
+            if (array[index(k)] == x) return k;
+        return -1;
+    }
+
+    // returns true if x is in the list
+    bool contains(T x) const {
+        return indexOf(x) != -1;
+    }
 };
 
 #endif
