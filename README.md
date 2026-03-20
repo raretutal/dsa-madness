@@ -137,3 +137,39 @@ Below is the comprehensive list of every ADT and its available methods.
 * `outEdges(int i)` - Returns a `std::vector<int>` of all vertices that vertex `i` points to.
 * `inEdges(int i)` - Returns a `std::vector<int>` of all vertices that point to vertex `i`.
 * `getNumVertices()` - Returns the total number of vertices in the graph.
+
+
+## ⏱️ Benchmarks & Tests
+
+### Running Tests
+Unit tests for each data structure are located in the `tests/` directory. You can compile and run them individually:
+
+```bash
+g++ tests/redblacktrees.cpp -o rbt_test
+./rb_test
+```
+
+## Running Benchmarks
+The `benchmarks/` folder contains stress tests (e.g., millions of insertions/deletions/searches) to compare the performance of different implementations.
+
+*You can change how many samples it goes through my changing it in the code itself if you prefer other values*
+
+```bash
+g++ benchmarks/insertion.cpp -o bench_insert -O3
+./bench_insert
+```
+
+*Note: It is recommended to compile benchmarks with the 03 optimizatoin flag for accurate time measurements*
+
+## 🤝 Contributing
+Contributions are welcome. If you'd like to add a new data structure (like an AVL Tree or a Fibonacci Heap) or improve an existing one:
+
+* Fork the project.
+* Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
+* Commit your Changes (`git commit -m "Add some AmazingFeature"`).
+* Push to the Branch (`git push origin feature/AmazingFeature`).
+* Open a Pull Request.
+
+
+
+
