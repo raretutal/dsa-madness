@@ -152,14 +152,14 @@ g++ tests/redblacktrees.cpp -o rbt_test
 ## Running Benchmarks
 The `benchmarks/` folder contains stress tests (e.g., millions of insertions/deletions/searches) to compare the performance of different implementations.
 
-*You can change how many samples it goes through my changing it in the code itself if you prefer other values*
+*NOTE: You can change how many samples it goes through my changing it in the code itself if you prefer other values*
 
 ```bash
 g++ benchmarks/insertion.cpp -o bench_insert -O3
 ./bench_insert
 ```
 
-*Note: It is recommended to compile benchmarks with the 03 optimizatoin flag for accurate time measurements*
+*NOTE: It is recommended to compile benchmarks with the 03 optimizatoin flag for accurate time measurements*
 
 ## 🤝 Contributing
 Contributions are welcome. If you'd like to add a new data structure (like an AVL Tree or a Fibonacci Heap) or improve an existing one:
