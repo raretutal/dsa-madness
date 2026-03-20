@@ -45,3 +45,17 @@ git clone [https://github.com/raretutal/dsa-madness.git](https://github.com/rare
 
 # 2. Navigate to the project directory
 cd dsa-madness
+```
+### Usage
+Simply include the specific header from the src/directory into your C++ file
+```cpp
+#include "src/redblacktrees.h"
+#include <iostream>
+
+int main() {
+    RedBlackTree<int> tree;
+    tree.add(42);
+    std::cout << "Contains 42? " << tree.contains(42) << std::endl;
+    return 0;
+}
+```
