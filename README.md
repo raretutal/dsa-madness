@@ -59,3 +59,81 @@ int main() {
     return 0;
 }
 ```
+
+## 🛠️ Abstract Data Types (ADTs) & API Reference
+
+Below is the comprehensive list of every ADT and its available methods.
+
+### **Stack** (Implemented via `ArrayStack`)
+*Twist: Every 5th `push()` inserts the element at the absolute bottom of the stack, causing an $O(N)$ shift.*
+* `push(T x)` - Adds element `x` to the top of the stack.
+* `pop()` - Removes and returns the top element of the stack.
+* `top()` - Returns the top element without removing it.
+* `size()` - Returns the current number of elements in the stack.
+* `isEmpty()` - Returns `true` if the stack contains no elements.
+
+### **Queue** (Implemented via `SLList`)
+*Twist: Caches a "spare" node upon removal to avoid frequent memory allocation on the next insertion.*
+* `add(T x)` - Enqueues element `x` to the back of the queue.
+* `remove()` - Dequeues and returns the element at the front.
+* `peek()` - Returns the front element without removing it.
+* `size()` - Returns the current number of elements in the queue.
+* `isEmpty()` - Returns `true` if the queue contains no elements.
+
+### **Priority Queue** (Implemented via `MeldableHeap`)
+*Twist: Tracks subtree sizes and always merges the new node into the smaller subtree to keep the tree balanced.*
+* `add(T x)` - Inserts element `x` into the priority queue.
+* `remove()` - Removes and returns the smallest element (highest priority).
+* `peek()` - Returns the smallest element without removing it.
+* `size()` - Returns the current number of elements.
+* `isEmpty()` - Returns `true` if the priority queue contains no elements.
+
+### **Deque** (Implemented via `DequeArray`)
+*Twist: Includes batch insertion methods and a formatted print debugger.*
+* `pushFront(T x)` - Adds element `x` to the front of the deque.
+* `pushBack(T x)` - Adds element `x` to the back of the deque.
+* `popFront()` - Removes and returns the front element.
+* `popBack()` - Removes and returns the back element.
+* `peekFront()` - Returns the front element without removing it.
+* `peekBack()` - Returns the back element without removing it.
+* `pushBackAll(T* arr, int size)` - Batch inserts an array of elements to the back.
+* `pushFrontAll(T* arr, int size)` - Batch inserts an array of elements to the front.
+* `print()` - Prints all elements in order.
+* `size()` - Returns the current number of elements.
+* `isEmpty()` - Returns `true` if the deque contains no elements.
+
+### **List** (Implemented via `ArrayDeque` & `DLList`)
+*Twists: `DLList` supports reverse printing and element counting. `ArrayDeque` supports indexing and containment checks.*
+* `get(int i)` - Returns the element at index `i`.
+* `set(int i, T x)` - Replaces the element at index `i` with `x` and returns the old value.
+* `add(int i, T x)` - Inserts element `x` at index `i`, shifting subsequent elements.
+* `remove(int i)` - Removes and returns the element at index `i`.
+* `addFirst(T x)` - Inserts element `x` at the beginning.
+* `addLast(T x)` - Inserts element `x` at the end.
+* `removeFirst()` - Removes and returns the first element.
+* `removeLast()` - Removes and returns the last element.
+* `print()` - Prints all elements in the list.
+* `printReverse()` *(DLList only)* - Prints all elements in reverse order.
+* `count(T x)` *(DLList only)* - Returns the number of times `x` appears in the list.
+* `indexOf(T x)` *(ArrayDeque only)* - Returns the index of `x`, or `-1` if not found.
+* `contains(T x)` *(ArrayDeque only)* - Returns `true` if `x` is in the list.
+
+### **Sorted Set (SSet)** (Implemented via `SkipList` & `RedBlackTree`)
+* `add(T x)` - Adds element `x` while maintaining sorted order. Returns `false` if `x` already exists.
+* `remove(T x)` - Removes element `x`. Returns `false` if `x` was not found.
+* `contains(T x)` - Returns `true` if `x` exists in the set.
+* `size()` - Returns the current number of elements.
+
+### **Unsorted Set (USet)** (Implemented via `ChainedHashTable`)
+* `add(T x)` - Hashes and adds element `x`. Returns `false` if `x` already exists.
+* `remove(T x)` - Removes element `x`. Returns `false` if `x` was not found.
+* `contains(T x)` - Returns `true` if `x` exists in the table.
+* `size()` - Returns the current number of elements.
+
+### **Graph** (Implemented via `AdjacencyMatrix`)
+* `addEdge(int i, int j)` - Adds a directed edge from vertex `i` to vertex `j`.
+* `removeEdge(int i, int j)` - Removes the directed edge from vertex `i` to vertex `j`.
+* `hasEdge(int i, int j)` - Returns `true` if an edge exists from `i` to `j`.
+* `outEdges(int i)` - Returns a `std::vector<int>` of all vertices that vertex `i` points to.
+* `inEdges(int i)` - Returns a `std::vector<int>` of all vertices that point to vertex `i`.
+* `getNumVertices()` - Returns the total number of vertices in the graph.
