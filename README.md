@@ -165,6 +165,9 @@ g++ benchmarks/insertion.cpp -o bench_insert -O3
 
 *NOTE: It is recommended to compile benchmarks with the 03 optimizatoin flag for accurate time measurements*
 
+👉 [View the Benchmark Results & Screenshots Here](./benchmarks/RESULTS.md)
+
+
 ## 🤝 Contributing
 Contributions are welcome. If you'd like to add a new data structure (like an AVL Tree or a Fibonacci Heap) or improve an existing one:
 
