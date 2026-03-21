@@ -10,7 +10,7 @@
 
 > A small, open-source C++ library of core Data Structures and Algorithms featuring unique implementation "twists" for educational benchmarking.
 
----
+<img src=".github/rainbow-line.svg" width="100%" height="4" />
 
 ## 📖 Project Intro
 
@@ -21,7 +21,7 @@
 * **Educational "Twists":** Select data structures feature intentional quirks (e.g., node-caching in linked lists, $O(N)$ penalty operations in stacks, and batch insertions) to create fascinating profiling and benchmarking scenarios.
 * **Interface-Driven Design:** Clean separation between abstract interfaces (`include/`) and concrete implementations (`src/`).
 
----
+<img src=".github/rainbow-line.svg" width="100%" height="4" />
 
 ## 🧠 Core Technical Concepts & Inspiration
 
@@ -32,7 +32,7 @@ This project exists to explore the inner workings of data structures rather than
 
 Unlike standard libraries built purely for speed, **DSA Madness** balances standard operations with deliberate "twists" to test edge cases in algorithmic complexity.
 
----
+<img src=".github/rainbow-line.svg" width="100%" height="4" />
 
 ## 🚀 Getting Started
 
@@ -142,6 +142,7 @@ Below is the comprehensive list of every ADT and its available methods.
 * `inEdges(int i)` - Returns a `std::vector<int>` of all vertices that point to vertex `i`.
 * `getNumVertices()` - Returns the total number of vertices in the graph.
 
+<img src=".github/rainbow-line.svg" width="100%" height="4" />
 
 ## ⏱️ Benchmarks & Tests
 
