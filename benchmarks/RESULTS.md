@@ -15,21 +15,26 @@ All benchmarks were compiled with the `-O3` optimization flag and executed on th
 ## 📈 Performance Screenshots
 
 ### 1. Insertion Benchmarks
-*(Description: 100,000 items inserted into each ADT)*
+*(100,000 items inserted into each ADT)*
 
 ![Insertion Results](../.github/Insertion.png)
 
 ### 2. Deletion Benchmarks
-*(Description: 100,000 items removed from each ADT)*
+*(100,000 items removed from each ADT)*
 
-![Deletion Results](path/to/your/deletion-screenshot.png)
+![Deletion Results](../.github/Deletion.png)
 
 ### 3. Search / Lookup Benchmarks
-*(Description: 100,000 item lookups in supported ADTs)*
+*(100,000 item lookups in supported ADTs)*
 
-![Search Results](path/to/your/search-screenshot.png)
+![Search Results](../.github/Search.png)
 
-### 4. Mixed Workload & Priority Scheduling
-*(Description: 50% Read, 25% Write, 25% Delete operations)*
+### 4. Mixed Workload
+*(50% Read, 25% Write, 25% Delete operations)*
 
-![Mixed Workload Results](path/to/your/mixed-screenshot.png)
+![Mixed Workload Results](../.github/Mixed_workload.png)
+
+### 5. Priority Scheduling
+*(100000000 random tasks - Inserting and Extracting)*
+
+![Priority Scheduling Results](../.github/Priority_task_scheduling.png)
