@@ -10,7 +10,6 @@ All benchmarks were compiled with the `-O3` optimization flag and executed on th
 * **RAM:** 16GB DDR4 (2400MT/s)
 * **OS:** Linux Mint 22.3
 
-<img src=".github/rainbow-line.svg" width="100%" height="4" />
 
 ## 📈 Performance Screenshots
 

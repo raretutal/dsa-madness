@@ -8,7 +8,7 @@
 
 </div>
 
-> A small, open-source C++ library of core Data Structures and Algorithms featuring unique implementation "twists" for educational benchmarking.
+> A small, open-source C++ library of core Data Structures and Algorithms featuring some unique implementation "twists" for educational benchmarking.
 
 <img src=".github/rainbow-line.svg" width="100%" height="4" />
 
